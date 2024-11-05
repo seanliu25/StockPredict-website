@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Viewer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Prediction Viewer</h1>
+
+        <!-- Dropdown for Stock Selection -->
+        <label for="stockSelect">Choose Stock:</label>
+        <select id="stockSelect">
+            <option value="amazon">Amazon</option>
+            <option value="nvidia">NVIDIA</option>
+            <option value="visa">Visa</option>
+        </select>
+
+        <!-- Checkboxes for Line Visibility -->
+        <div>
+            <input type="checkbox" id="togglePredicted" checked>
+            <label for="togglePredicted">Show Predicted Data</label>
+
+            <input type="checkbox" id="toggleActual" checked>
+            <label for="toggleActual">Show Actual Data</label>
+        </div>
+
+        <canvas id="stockChart" width="800" height="400"></canvas>
+
+        <!-- Display accuracy rate below the chart -->
+        <div id="accuracyRate" style="color: white; font-size: 1.2em; margin-top: 10px;">
+            Accuracy Rate: Loading...
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

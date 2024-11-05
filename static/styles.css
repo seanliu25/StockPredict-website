@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    background-color: #121212; /* Dark background for modern look */
+    color: #ffffff; /* White text for contrast */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00d4ff; /* Soft cyan color for header */
+}
+
+/* Dropdown Menu Styling */
+label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: #444444;
+}
+
+/* Canvas (Chart) Styling */
+#stockChart {
+    margin-top: 20px;
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
