@@ -107,6 +107,20 @@ document.addEventListener("DOMContentLoaded", function () {
         residualChartCanvas.style.display = 'block'; // Show residual chart
     };
 
+    togglePredicted.addEventListener("change", () => {
+        if (stockChart) {
+            stockChart.data.datasets[1].hidden = !togglePredicted.checked;
+            stockChart.update();
+        }
+    });
+   
+    toggleActual.addEventListener("change", () => {
+        if (stockChart) {
+            stockChart.data.datasets[0].hidden = !toggleActual.checked;
+            stockChart.update();
+        }
+    });
+   
     const loadChart = async () => {
         const stock = document.getElementById("stockSelect").value;
         const { actual, predicted, residuals, accuracy } = await fetchData(stock);
@@ -119,6 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
         residualChartCanvas.style.display = 'none'; // Hide residual chart initially
         residualVisible = false; // Reset visibility state
         document.getElementById("showResiduals").textContent = "Show Residuals";
+        hidden: !toggleActual.checked // For the actual data dataset
+        hidden: !togglePredicted.checked // For the predicted data dataset
     };
 
     // Toggle Residuals chart visibility

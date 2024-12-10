@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Stock Prediction Viewer</h1>
-
+        
         <!-- Dropdown for Stock Selection -->
         <label for="stockSelect">Choose Stock:</label>
         <select id="stockSelect">
@@ -20,6 +20,15 @@
             <option value="visa">Visa</option>
         </select>
         <p>Use Scroll to Zoom In and Out</p>
+        <div>
+            <input type="checkbox" id="togglePredicted" checked>
+            <label for="togglePredicted">Show Predicted Data</label>
+
+            <input type="checkbox" id="toggleActual" checked>
+            <label for="toggleActual">Show Actual Data</label>
+        </div>
+
+        
 
         <!-- Main Chart -->
         <canvas id="stockChart" width="800" height="400"></canvas>
